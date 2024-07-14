@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SuksesSelalu.com</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #333;
+      padding: 10px;
+      text-align: center;
+      color: white;
+    }
+
+    #logo {
+      display: block;
+      margin: 0 auto;
+    }
+
+    #live-clock {
+      text-align: right;
+      padding: 10px;
+      background-color: #333;
+      color: white;
+    }
+
+    #products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 20px;
+    }
+
+    .product {
+      text-align: center;
+      margin: 10px;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="live-clock"><font color="pink">Live Time: </font></div>
+
+  <header>
+    <!-- Menampilkan logo dari folder logos -->
+    <img id="logo" src="assets/logos/main_logo-1.png" alt="Main Logo" width="400">
+  </header>
+<Marquee><p><a color="pink"> <h2>Anda Berminat Untuk Mencoba Design Kami, Kami juga Bisa Service Telepon/Ponsel Seperti Lupa password dan masalah lainnya, Sila klik Order jika Berminat... TERIMA KASIH </h2> </color="pink"></p></Marquee>
+  <div id="products">
+    <div class="product">
+      <img src="path/to/product1.png" alt="Product 1" width="100">
+      <button onclick="orderWhatsApp('Product 1')">Order</button>
+    </div>
+
+    <div class="product">
+      <img src="path/to/product2.png" alt="Product 2" width="100">
+      <button onclick="orderWhatsApp('Product 2')">Order</button>
+    </div>
+
+    <div class="product">
+      <img src="path/to/product3.png" alt="Product 3" width="100">
+      <button onclick="orderWhatsApp('Product 3')">Order</button>
+    </div>
+
+    <div class="product">
+      <img src="path/to/product4.png" alt="Product 4" width="150">
+      <button onclick="orderWhatsApp('Product 4')">Order</button>
+    </div>
+
+    <div class="product">
+      <img src="path/to/product5.png" alt="Product 5" width="100">
+      <button onclick="orderWhatsApp('Product 5')">Order</button>
+    </div>
+
+    <div class="product">
+      <img src="path/to/product6.png" alt="Product 6" width="100">
+      <button onclick="orderWhatsApp('Product 6')">Order</button>
+    </div>
+  </div>
+
+  <footer>
+    <!-- Ikon media sosial, hak cipta, dan lainnya -->
+    <a href="https://www.facebook.com"><img src="path/to/facebook-icon.png" alt="Facebook" width="20"></a>
+    <a href="https://www.youtube.com"><img src="path/to/youtube-icon.png" alt="YouTube" width="20"></a>
+    <a href="mailto:your@email.com"><img src="path/to/email-icon.png" alt="Email" width="20"></a>
+    <font color="pink">&copy; 2024 kajili-jili PROJECT Sdn.Bhd  </font>
+  </footer>
+
+  <script>
+    function orderWhatsApp(product) {
+      // Gantilah 'your_whatsapp_number' dengan nomor WhatsApp sebenarnya
+      window.location.href = `https://wa.me/60128140591/?text=Saya Berminat Untuk Mencoba${product}`;
+    }
+
+    function updateClock() {
+      var now = new Date();
+      var hours = now.getHours();
+      var minutes = now.getMinutes();
+      var seconds = now.getSeconds();
+
+      // Menambahkan nol di depan jika diperlukan
+      hours = hours < 10 ? "0" + hours : hours;
+      minutes = minutes < 10 ? "0" + minutes : minutes;
+      seconds = seconds < 10 ? "0" + seconds : seconds;
+
+      var currentTime = hours + ":" + minutes + ":" + seconds;
+      document.getElementById("live-clock").innerHTML = "<font color='red'>Live Time: </font>" + currentTime;
+
+      // Memperbarui setiap detik
+      setTimeout(updateClock, 1000);
+    }
+
+    // Panggilan awal untuk memulai jam
+    updateClock();
+  </script>
+</body>
+
+</html>
